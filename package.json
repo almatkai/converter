@@ -3,7 +3,7 @@
   "name": "converter",
   "title": "Converter",
   "description": "Arbitrary input, direct output. Includes Base converter, Byte converter, Code converter, etc.",
-  "icon": "extension-icon.png",
+  "icon": "assets/extension-icon.png",
   "author": "almatkai",
   "contributors": ["koinzhang", "Saafo", "fmkra"],
   "categories": ["Design Tools", "Developer Tools", "Productivity"],
@@ -13,7 +13,7 @@
     {
       "name": "base-converter",
       "title": "Base Converter",
-      "icon": "extension-icon.png",
+      "icon": "assets/extension-icon.png",
       "description": "Convert number from any base to any base: decimal, binary, octal, hexadecimal, etc.",
       "mode": "view",
       "platforms": ["macOS", "Windows"],
@@ -43,7 +43,7 @@
     {
       "name": "code-converter",
       "title": "Code Converter",
-      "icon": "extension-icon.png",
+      "icon": "assets/extension-icon.png",
       "description": "Convert between different character encodings: Unicode, Base64, UTF-8, ASCII, &#xXXXX, URL.",
       "mode": "view",
       "platforms": ["macOS", "Windows"],
@@ -61,7 +61,7 @@
     {
       "name": "byte-converter",
       "title": "Byte Converter",
-      "icon": "extension-icon.png",
+      "icon": "assets/extension-icon.png",
       "description": "Convert among different byte unit: b, B, KB, MB, GB, etc.",
       "mode": "view",
       "platforms": ["macOS", "Windows"]
