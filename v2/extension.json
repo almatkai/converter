@@ -1,0 +1,135 @@
+{
+  "version": "0.2.0-beta.1",
+  "schemaVersion": 3,
+  "id": "com.tezbar.native.converter",
+  "slug": "converter",
+  "name": "Converter",
+  "description": "Arbitrary input, direct output. Includes Base converter, Byte converter, Code converter, etc.",
+  "author": "almatkai",
+  "icon": "resources/extension-icon.png",
+  "runtime": "rust",
+  "execution": "process",
+  "protocolVersion": 1,
+  "repository": "https://github.com/almatkai/converter",
+  "platforms": [
+    "macOS",
+    "Windows"
+  ],
+  "replaces": [
+    "com.tezbar.converter",
+    "raycast.converter"
+  ],
+  "preferences": [
+    {
+      "name": "autoPaste",
+      "type": "checkbox",
+      "required": false,
+      "label": "Auto Paste",
+      "description": "Automatically pastes text from clipboard when opening a command.",
+      "default": true
+    }
+  ],
+  "capabilities": [
+    "clipboard.read",
+    "clipboard.write",
+    "settings.open"
+  ],
+  "artifacts": {},
+  "commands": [
+    {
+      "name": "base-converter",
+      "title": "Base Converter",
+      "icon": "resources/extension-icon.png",
+      "description": "Convert number from any base to any base: decimal, binary, octal, hexadecimal, etc.",
+      "mode": "view",
+      "platforms": [
+        "macOS",
+        "Windows"
+      ],
+      "preferences": [
+        {
+          "name": "advanceView",
+          "type": "checkbox",
+          "required": false,
+          "label": "Advance View",
+          "description": "In the advanced view, you can freely choose the bases of mutual conversion.",
+          "default": true
+        },
+        {
+          "name": "advanceViewLocation",
+          "title": "Advance View Location",
+          "description": "Select the location of the advanced view: top or bottom.",
+          "type": "dropdown",
+          "default": "Bottom",
+          "data": [
+            {
+              "title": "Top",
+              "value": "Top"
+            },
+            {
+              "title": "Bottom",
+              "value": "Bottom"
+            }
+          ],
+          "required": false
+        }
+      ],
+      "runtime": "rust",
+      "refreshMs": null,
+      "concurrency": "serialize",
+      "timeoutMs": 150000
+    },
+    {
+      "name": "code-converter",
+      "title": "Code Converter",
+      "icon": "resources/extension-icon.png",
+      "description": "Convert between different character encodings: Unicode, Base64, UTF-8, ASCII, &#xXXXX, URL.",
+      "mode": "view",
+      "platforms": [
+        "macOS",
+        "Windows"
+      ],
+      "preferences": [
+        {
+          "name": "asciiCommaSeparated",
+          "type": "checkbox",
+          "required": false,
+          "label": "Comma separated ASCII",
+          "description": "If disabled, only ASCII characters with code <13 is supported",
+          "default": true
+        }
+      ],
+      "runtime": "rust",
+      "refreshMs": null,
+      "concurrency": "serialize",
+      "timeoutMs": 150000
+    },
+    {
+      "name": "byte-converter",
+      "title": "Byte Converter",
+      "icon": "resources/extension-icon.png",
+      "description": "Convert among different byte unit: b, B, KB, MB, GB, etc.",
+      "mode": "view",
+      "platforms": [
+        "macOS",
+        "Windows"
+      ],
+      "runtime": "rust",
+      "refreshMs": null,
+      "concurrency": "serialize",
+      "timeoutMs": 150000
+    }
+  ],
+  "verification": [
+    {
+      "platform": "macOS",
+      "state": "not-run",
+      "note": "Development ARM64 package and mocked process verification only; live GUI not run."
+    },
+    {
+      "platform": "Windows",
+      "state": "not-run",
+      "note": "MSVC and native Windows GUI not run; GNU check is not platform acceptance."
+    }
+  ]
+}

@@ -1,0 +1,275 @@
+--- a/src/renderer/src/raycast-api/form-runtime.tsx
++++ b/src/renderer/src/raycast-api/form-runtime.tsx
+@@ -25,6 +25,7 @@
+   options?: Array<{ title: string; value: string }>
+   allowMultipleSelection?: boolean
+   actionId?: string
++  focusActionId?: string
+ }
+ 
+ type FormItem =
+@@ -102,6 +103,7 @@
+           options: options.length > 0 ? options : undefined,
+           allowMultipleSelection: node.props?.allowMultipleSelection === true,
+           actionId: typeof node.props?.actionId === 'string' ? node.props.actionId : undefined,
++          focusActionId: typeof node.props?.focusActionId === 'string' ? node.props.focusActionId : undefined,
+         },
+       })
+       return
+@@ -209,7 +211,7 @@
+   title: string
+   onBack: () => void
+   onSubmitForm: (values: Record<string, unknown>) => void
+-  onChangeField: (actionId: string, value: unknown) => Promise<void> | void
++  onChangeField: (actionId: string, value: unknown, values?: Record<string, unknown>) => Promise<void> | void
+   onInvokeAction: (actionId: string, values?: Record<string, unknown>) => Promise<void> | void
+   onOpenActions: () => void
+   actionNotice?: { message: string; tone: 'success' | 'error' } | null
+@@ -225,6 +227,12 @@
+     [items]
+   )
+   const [values, setValues] = useState<Record<string, unknown>>(() => reconcileFormValues(fields))
++  const draft = useRef({ values, revision: 0, lastChangedField: '' })
++  const wholeForm = (): Record<string, unknown> => ({
++    ...draft.current.values,
++    _inputRevision: draft.current.revision,
++    _lastChangedField: draft.current.lastChangedField,
++  })
+   const nativeColorWheel = useMemo(() => parseNativeColorWheel(root.props?.nativeColorWheel), [root.props?.nativeColorWheel])
+   const localWheelCoordinates = useRef<FormWheelCoordinates | null>(null)
+   const filePickerOpenRef = useRef(false)
+@@ -238,13 +246,21 @@
+       ? previousServerForm.current.fields : undefined
+     const wheelDraft = nativeColorWheel ? localWheelCoordinates.current : null
+     previousServerForm.current = { title, fields }
+-    setValues((previous) => ({
+-      ...reconcileFormValues(fields, previousFields ? previous : undefined, previousFields),
+-      ...wheelDraft,
+-    }))
+-  }, [fields, nativeColorWheel, title])
+-
+-  useImperativeHandle(ref, () => ({ getValues: () => values }), [values])
++    const serverRevision = root.props?.inputRevision
++    // Native revisioned forms must never overwrite a newer local draft with a
++    // delayed controlled response, including an A/B/A edit sequence.
++    if (typeof serverRevision === 'number' && serverRevision < draft.current.revision) return
++    setValues((previous) => {
++      const next = {
++        ...reconcileFormValues(fields, previousFields ? previous : undefined, previousFields),
++        ...wheelDraft,
++      }
++      draft.current.values = next
++      return next
++    })
++  }, [fields, nativeColorWheel, title, root.props?.inputRevision])
++
++  useImperativeHandle(ref, () => ({ getValues: wholeForm }), [values])
+ 
+   const releaseFilePickerBlurSuppression = useCallback((): void => {
+     if (!filePickerOpenRef.current) return
+@@ -277,8 +293,10 @@
+   }, [releaseFilePickerBlurSuppression])
+ 
+   const updateValue = (field: FormField, value: unknown): void => {
+-    setValues((previous) => ({ ...previous, [field.id]: value }))
+-    if (field.actionId) void onChangeField(field.actionId, value)
++    const next = { ...draft.current.values, [field.id]: value }
++    draft.current = { values: next, revision: draft.current.revision + 1, lastChangedField: field.id }
++    setValues(next)
++    if (field.actionId) void onChangeField(field.actionId, value, wholeForm())
+   }
+ 
+   return (
+@@ -286,7 +304,7 @@
+       className="flex h-full min-h-0 flex-col"
+       onSubmit={(event) => {
+         event.preventDefault()
+-        onSubmitForm(values)
++        onSubmitForm(wholeForm())
+       }}
+       onKeyDownCapture={(event) => {
+         if (
+@@ -298,7 +316,7 @@
+           return
+         }
+         event.preventDefault()
+-        onSubmitForm(values)
++        onSubmitForm(wholeForm())
+       }}
+     >
+       <div className="glass-card mb-2 shrink-0 px-4 py-3">
+@@ -504,6 +522,10 @@
+                   <input
+                     id={controlId}
+                     type={inputType}
++                    autoFocus={field.id === root.props?.focusedFieldId}
++                    onFocus={() => {
++                      if (field.focusActionId) void onInvokeAction(field.focusActionId, wholeForm())
++                    }}
+                     value={current}
+                     onChange={(event) => updateValue(field, event.target.value)}
+                     placeholder={field.placeholder}
+--- a/src/renderer/src/raycast-api/index.tsx
++++ b/src/renderer/src/raycast-api/index.tsx
+@@ -158,7 +158,7 @@
+               title={title}
+               onBack={onSurfaceBack}
+               onSubmitForm={onSubmitForm}
+-              onChangeField={(actionId, value) => onInvokeAction(actionId, { value })}
++              onChangeField={(actionId, value, values) => onInvokeAction(actionId, { ...values, value })}
+               onInvokeAction={onInvokeAction}
+               onOpenActions={openActions}
+               actionNotice={actionNotice}
+@@ -210,7 +210,7 @@
+                   onSubmitForm(formRuntimeRef.current?.getValues() ?? {})
+                   return
+                 }
+-                void onInvokeAction(action.id)
++                void onInvokeAction(action.id, kind === 'form' ? formRuntimeRef.current?.getValues() : undefined)
+               }}
+             />
+           ) : null}
+--- a/src-tauri/src/native_core/extensions/registry.rs
++++ b/src-tauri/src/native_core/extensions/registry.rs
+@@ -16,6 +16,7 @@
+     path: PathBuf,
+     manifest: Value,
+     data_dir: PathBuf,
++    resource_path: PathBuf,
+ }
+ 
+ fn slug(id: &str) -> Result<String, String> {
+@@ -73,9 +74,10 @@
+             };
+             let Ok(slug) = slug(name) else { continue };
+             let native = name.starts_with("com.tezbar.native.");
++            let mut resource_path = path.clone();
+             let mut manifest = if native {
+                 match super::process_install::resolve(ctx, name) {
+-                    Ok(package) => package.manifest,
++                    Ok(package) => { resource_path = package.dir; package.manifest },
+                     Err(error) => {
+                         // A damaged canonical directory is NEVER a Raycast package.
+                         let mut value = read_json(&path.join("package.json"))
+@@ -110,6 +112,7 @@
+                 path,
+                 manifest,
+                 data_dir: ctx.paths.data_dir.clone(),
++                resource_path,
+             });
+         }
+     }
+@@ -129,39 +132,30 @@
+ 
+ /// Native implementations use the same discovery and platform rules as the launcher.
+ pub(super) fn installed_command(ctx: &CoreContext, id: &str, command: &str) -> Option<Installed> {
+-    let native = if id.starts_with("raycast.") {
+-        let slug = slug(id).ok()?;
+-        let canonical = super::v2_runtime::canonical_id(&slug);
+-        installed(ctx, &canonical).ok()
+-    } else if id.starts_with("com.tezbar.native.") {
+-        installed(ctx, id).ok()
+-    } else {
+-        None
+-    };
+-    if let Some(extension) = native {
+-        let active = extension.manifest["healthError"].is_null()
+-            && extension.manifest["commands"]
+-                .as_array()?
+-                .iter()
+-                .any(|c| c["name"] == command && c["runtime"] == "rust" && compatible(c, true));
+-        if active {
+-            return Some(extension);
+-        }
+-        if id.starts_with("com.tezbar.native.") {
+-            return None;
+-        }
+-    }
+-    if id.starts_with("com.tezbar.native.") {
+-        return None;
+-    }
++    // Only a successfully verified active package may supply a declared alias.
++    // A same-slug name or prefix alone is never replacement authority.
++    let canonical = id.starts_with("com.tezbar.native.");
++    let native = collect(ctx).into_iter().find(|entry| {
++        entry.id.starts_with("com.tezbar.native.")
++            && entry.manifest["healthError"].is_null()
++            && if canonical { entry.id == id } else {
++                entry.manifest["replaces"].as_array().is_some_and(|ids| ids.iter().any(|alias| alias.as_str() == Some(id)))
++            }
++            && entry.manifest["commands"].as_array().is_some_and(|commands| commands.iter().any(|c|
++                c["name"] == command && c["runtime"] == "rust" && compatible(c, true)))
++    });
++    if native.is_some() || canonical { return native; }
+     let extension = installed(ctx, id).ok()?;
+     (compatible(&extension.manifest, false)
+-        && extension.manifest["commands"]
+-            .as_array()
+-            .into_iter()
+-            .flatten()
+-            .any(|cmd| cmd["name"].as_str() == Some(command) && compatible(cmd, true)))
+-    .then_some(extension)
++        && extension.manifest["commands"].as_array().into_iter().flatten().any(|cmd|
++            cmd["name"].as_str() == Some(command) && compatible(cmd, true)))
++        .then_some(extension)
++}
++
++pub(super) fn canonical_command_id(ctx: &CoreContext, id: &str, command: &str) -> Option<String> {
++    installed_command(ctx, id, command)
++        .filter(|entry| entry.id.starts_with("com.tezbar.native."))
++        .map(|entry| entry.id)
+ }
+ 
+ fn platform() -> &'static str {
+@@ -245,8 +239,8 @@
+         return None;
+     }
+     let mut candidates = vec![
+-        extension.path.join(relative),
+-        extension.path.join("assets").join(relative),
++        extension.resource_path.join(relative),
++        extension.resource_path.join("assets").join(relative),
+     ];
+     if extension.id.starts_with("com.tezbar.native.") {
+         if let Some(packages) = extension.path.parent() {
+@@ -309,8 +303,8 @@
+         return None;
+     }
+     let mut candidates = vec![
+-        extension.path.join(relative),
+-        extension.path.join("assets").join(relative),
++        extension.resource_path.join(relative),
++        extension.resource_path.join("assets").join(relative),
+     ];
+     if extension.id.starts_with("com.tezbar.native.") {
+         if let Some(packages) = extension.path.parent() {
+@@ -574,6 +568,7 @@
+     let extension = Installed {
+         id: id.into(),
+         slug: slug(id)?,
++        resource_path: path.clone(),
+         path,
+         manifest: Value::Null,
+         data_dir: ctx.paths.data_dir.clone(),
+--- a/src-tauri/src/native_core/extensions/native.rs
++++ b/src-tauri/src/native_core/extensions/native.rs
+@@ -616,6 +616,7 @@
+         } else if channel == "extension:run-command" {
+             let requested = body["extensionId"].as_str().unwrap_or("");
+             if requested.starts_with("com.tezbar.native.") || v2_runtime::slug(requested).is_some()
++                || registry::canonical_command_id(ctx, requested, body["commandName"].as_str().unwrap_or("")).is_some()
+             {
+                 self.launch(ctx, files, body).await
+             } else {
+@@ -644,7 +645,10 @@
+         let canonical = if requested.starts_with("com.tezbar.native.") {
+             requested.to_string()
+         } else {
+-            v2_runtime::canonical_id(v2_runtime::slug(requested).ok_or("Unknown extension")?)
++            match registry::canonical_command_id(ctx, requested, command) {
++                Some(id) => id,
++                None => return Ok(None),
++            }
+         };
+         let slot = self.slot(&canonical);
+         let mut generation = slot.generation.subscribe();

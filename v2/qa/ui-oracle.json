@@ -1,0 +1,1588 @@
+[
+  {
+    "command": "base-converter",
+    "prefs": {
+      "advanceView": true,
+      "advanceViewLocation": "Bottom"
+    },
+    "fields": [
+      {
+        "type": "Form.TextField",
+        "title": "10",
+        "value": ""
+      },
+      {
+        "type": "Form.TextField",
+        "title": "2",
+        "value": ""
+      },
+      {
+        "type": "Form.TextField",
+        "title": "4",
+        "value": ""
+      },
+      {
+        "type": "Form.TextField",
+        "title": "8",
+        "value": ""
+      },
+      {
+        "type": "Form.TextField",
+        "title": "16",
+        "value": ""
+      },
+      {
+        "type": "Form.TextField",
+        "title": "32",
+        "value": ""
+      },
+      {
+        "type": "Form.Separator",
+        "title": null,
+        "value": null
+      },
+      {
+        "type": "Form.Dropdown",
+        "title": "From Base",
+        "value": "10"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "2",
+        "value": "2"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "3",
+        "value": "3"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "4",
+        "value": "4"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "5",
+        "value": "5"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "6",
+        "value": "6"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "7",
+        "value": "7"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "8",
+        "value": "8"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "9",
+        "value": "9"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "10",
+        "value": "10"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "11",
+        "value": "11"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "12",
+        "value": "12"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "13",
+        "value": "13"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "14",
+        "value": "14"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "15",
+        "value": "15"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "16",
+        "value": "16"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "17",
+        "value": "17"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "18",
+        "value": "18"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "19",
+        "value": "19"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "20",
+        "value": "20"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "21",
+        "value": "21"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "22",
+        "value": "22"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "23",
+        "value": "23"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "24",
+        "value": "24"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "25",
+        "value": "25"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "26",
+        "value": "26"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "27",
+        "value": "27"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "28",
+        "value": "28"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "29",
+        "value": "29"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "30",
+        "value": "30"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "31",
+        "value": "31"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "32",
+        "value": "32"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "33",
+        "value": "33"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "34",
+        "value": "34"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "35",
+        "value": "35"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "36",
+        "value": "36"
+      },
+      {
+        "type": "Form.Dropdown",
+        "title": "To Base",
+        "value": "2"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "2",
+        "value": "2"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "3",
+        "value": "3"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "4",
+        "value": "4"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "5",
+        "value": "5"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "6",
+        "value": "6"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "7",
+        "value": "7"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "8",
+        "value": "8"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "9",
+        "value": "9"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "10",
+        "value": "10"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "11",
+        "value": "11"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "12",
+        "value": "12"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "13",
+        "value": "13"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "14",
+        "value": "14"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "15",
+        "value": "15"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "16",
+        "value": "16"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "17",
+        "value": "17"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "18",
+        "value": "18"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "19",
+        "value": "19"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "20",
+        "value": "20"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "21",
+        "value": "21"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "22",
+        "value": "22"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "23",
+        "value": "23"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "24",
+        "value": "24"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "25",
+        "value": "25"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "26",
+        "value": "26"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "27",
+        "value": "27"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "28",
+        "value": "28"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "29",
+        "value": "29"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "30",
+        "value": "30"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "31",
+        "value": "31"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "32",
+        "value": "32"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "33",
+        "value": "33"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "34",
+        "value": "34"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "35",
+        "value": "35"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "36",
+        "value": "36"
+      },
+      {
+        "type": "Form.TextField",
+        "title": "Input",
+        "value": ""
+      },
+      {
+        "type": "Form.Description",
+        "title": "Output",
+        "value": null
+      }
+    ],
+    "actions": [
+      {
+        "title": "Copy Base 10",
+        "content": ""
+      },
+      {
+        "title": "Copy Base 10",
+        "content": ""
+      },
+      {
+        "title": "Copy Base 2",
+        "content": ""
+      },
+      {
+        "title": "Copy Base 4",
+        "content": ""
+      },
+      {
+        "title": "Copy Base 8",
+        "content": ""
+      },
+      {
+        "title": "Copy Base 16",
+        "content": ""
+      },
+      {
+        "title": "Copy Base 32",
+        "content": ""
+      },
+      {
+        "title": "Copy Output",
+        "content": ""
+      },
+      {
+        "title": "Clear All",
+        "content": null
+      },
+      {
+        "title": "Configure Command",
+        "content": null
+      },
+      {
+        "title": "Configure Extension",
+        "content": null
+      }
+    ]
+  },
+  {
+    "command": "base-converter",
+    "prefs": {
+      "advanceView": true,
+      "advanceViewLocation": "Top"
+    },
+    "fields": [
+      {
+        "type": "Form.Dropdown",
+        "title": "From Base",
+        "value": "10"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "2",
+        "value": "2"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "3",
+        "value": "3"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "4",
+        "value": "4"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "5",
+        "value": "5"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "6",
+        "value": "6"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "7",
+        "value": "7"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "8",
+        "value": "8"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "9",
+        "value": "9"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "10",
+        "value": "10"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "11",
+        "value": "11"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "12",
+        "value": "12"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "13",
+        "value": "13"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "14",
+        "value": "14"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "15",
+        "value": "15"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "16",
+        "value": "16"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "17",
+        "value": "17"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "18",
+        "value": "18"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "19",
+        "value": "19"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "20",
+        "value": "20"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "21",
+        "value": "21"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "22",
+        "value": "22"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "23",
+        "value": "23"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "24",
+        "value": "24"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "25",
+        "value": "25"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "26",
+        "value": "26"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "27",
+        "value": "27"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "28",
+        "value": "28"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "29",
+        "value": "29"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "30",
+        "value": "30"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "31",
+        "value": "31"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "32",
+        "value": "32"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "33",
+        "value": "33"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "34",
+        "value": "34"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "35",
+        "value": "35"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "36",
+        "value": "36"
+      },
+      {
+        "type": "Form.Dropdown",
+        "title": "To Base",
+        "value": "2"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "2",
+        "value": "2"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "3",
+        "value": "3"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "4",
+        "value": "4"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "5",
+        "value": "5"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "6",
+        "value": "6"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "7",
+        "value": "7"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "8",
+        "value": "8"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "9",
+        "value": "9"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "10",
+        "value": "10"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "11",
+        "value": "11"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "12",
+        "value": "12"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "13",
+        "value": "13"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "14",
+        "value": "14"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "15",
+        "value": "15"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "16",
+        "value": "16"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "17",
+        "value": "17"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "18",
+        "value": "18"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "19",
+        "value": "19"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "20",
+        "value": "20"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "21",
+        "value": "21"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "22",
+        "value": "22"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "23",
+        "value": "23"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "24",
+        "value": "24"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "25",
+        "value": "25"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "26",
+        "value": "26"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "27",
+        "value": "27"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "28",
+        "value": "28"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "29",
+        "value": "29"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "30",
+        "value": "30"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "31",
+        "value": "31"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "32",
+        "value": "32"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "33",
+        "value": "33"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "34",
+        "value": "34"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "35",
+        "value": "35"
+      },
+      {
+        "type": "Form.Dropdown.Item",
+        "title": "36",
+        "value": "36"
+      },
+      {
+        "type": "Form.TextField",
+        "title": "Input",
+        "value": ""
+      },
+      {
+        "type": "Form.Description",
+        "title": "Output",
+        "value": null
+      },
+      {
+        "type": "Form.Separator",
+        "title": null,
+        "value": null
+      },
+      {
+        "type": "Form.TextField",
+        "title": "10",
+        "value": ""
+      },
+      {
+        "type": "Form.TextField",
+        "title": "2",
+        "value": ""
+      },
+      {
+        "type": "Form.TextField",
+        "title": "4",
+        "value": ""
+      },
+      {
+        "type": "Form.TextField",
+        "title": "8",
+        "value": ""
+      },
+      {
+        "type": "Form.TextField",
+        "title": "16",
+        "value": ""
+      },
+      {
+        "type": "Form.TextField",
+        "title": "32",
+        "value": ""
+      }
+    ],
+    "actions": [
+      {
+        "title": "Copy Base 10",
+        "content": ""
+      },
+      {
+        "title": "Copy Base 10",
+        "content": ""
+      },
+      {
+        "title": "Copy Base 2",
+        "content": ""
+      },
+      {
+        "title": "Copy Base 4",
+        "content": ""
+      },
+      {
+        "title": "Copy Base 8",
+        "content": ""
+      },
+      {
+        "title": "Copy Base 16",
+        "content": ""
+      },
+      {
+        "title": "Copy Base 32",
+        "content": ""
+      },
+      {
+        "title": "Copy Output",
+        "content": ""
+      },
+      {
+        "title": "Clear All",
+        "content": null
+      },
+      {
+        "title": "Configure Command",
+        "content": null
+      },
+      {
+        "title": "Configure Extension",
+        "content": null
+      }
+    ]
+  },
+  {
+    "command": "base-converter",
+    "prefs": {
+      "advanceView": false,
+      "advanceViewLocation": "Bottom"
+    },
+    "fields": [
+      {
+        "type": "Form.TextField",
+        "title": "10",
+        "value": ""
+      },
+      {
+        "type": "Form.TextField",
+        "title": "2",
+        "value": ""
+      },
+      {
+        "type": "Form.TextField",
+        "title": "4",
+        "value": ""
+      },
+      {
+        "type": "Form.TextField",
+        "title": "8",
+        "value": ""
+      },
+      {
+        "type": "Form.TextField",
+        "title": "16",
+        "value": ""
+      },
+      {
+        "type": "Form.TextField",
+        "title": "32",
+        "value": ""
+      }
+    ],
+    "actions": [
+      {
+        "title": "Copy Base 10",
+        "content": ""
+      },
+      {
+        "title": "Copy Base 10",
+        "content": ""
+      },
+      {
+        "title": "Copy Base 2",
+        "content": ""
+      },
+      {
+        "title": "Copy Base 4",
+        "content": ""
+      },
+      {
+        "title": "Copy Base 8",
+        "content": ""
+      },
+      {
+        "title": "Copy Base 16",
+        "content": ""
+      },
+      {
+        "title": "Copy Base 32",
+        "content": ""
+      },
+      {
+        "title": "Clear All",
+        "content": null
+      },
+      {
+        "title": "Configure Command",
+        "content": null
+      },
+      {
+        "title": "Configure Extension",
+        "content": null
+      }
+    ]
+  },
+  {
+    "command": "code-converter",
+    "prefs": {
+      "advanceView": true,
+      "advanceViewLocation": "Bottom"
+    },
+    "fields": [
+      {
+        "type": "Form.TextField",
+        "title": "Native",
+        "value": ""
+      },
+      {
+        "type": "Form.TextField",
+        "title": "Unicode",
+        "value": ""
+      },
+      {
+        "type": "Form.TextField",
+        "title": "Base64",
+        "value": ""
+      },
+      {
+        "type": "Form.TextField",
+        "title": "UTF-8",
+        "value": ""
+      },
+      {
+        "type": "Form.TextField",
+        "title": "ASCII",
+        "value": ""
+      },
+      {
+        "type": "Form.TextField",
+        "title": "Hex",
+        "value": ""
+      },
+      {
+        "type": "Form.TextField",
+        "title": "Decimal",
+        "value": ""
+      },
+      {
+        "type": "Form.TextField",
+        "title": "Encoded URL",
+        "value": ""
+      },
+      {
+        "type": "Form.TextField",
+        "title": "HTML entity",
+        "value": ""
+      }
+    ],
+    "actions": [
+      {
+        "title": "Copy Native",
+        "content": ""
+      },
+      {
+        "title": "Copy Unicode",
+        "content": ""
+      },
+      {
+        "title": "Copy Base64",
+        "content": ""
+      },
+      {
+        "title": "Copy Utf-8",
+        "content": ""
+      },
+      {
+        "title": "Copy Ascii",
+        "content": ""
+      },
+      {
+        "title": "Copy Hex",
+        "content": ""
+      },
+      {
+        "title": "Copy Decimal",
+        "content": ""
+      },
+      {
+        "title": "Copy Encoded URL",
+        "content": ""
+      },
+      {
+        "title": "Copy Entity",
+        "content": ""
+      },
+      {
+        "title": "Clear All",
+        "content": null
+      },
+      {
+        "title": "Configure Command",
+        "content": null
+      },
+      {
+        "title": "Configure Extension",
+        "content": null
+      }
+    ]
+  },
+  {
+    "command": "code-converter",
+    "prefs": {
+      "advanceView": true,
+      "advanceViewLocation": "Top"
+    },
+    "fields": [
+      {
+        "type": "Form.TextField",
+        "title": "Native",
+        "value": ""
+      },
+      {
+        "type": "Form.TextField",
+        "title": "Unicode",
+        "value": ""
+      },
+      {
+        "type": "Form.TextField",
+        "title": "Base64",
+        "value": ""
+      },
+      {
+        "type": "Form.TextField",
+        "title": "UTF-8",
+        "value": ""
+      },
+      {
+        "type": "Form.TextField",
+        "title": "ASCII",
+        "value": ""
+      },
+      {
+        "type": "Form.TextField",
+        "title": "Hex",
+        "value": ""
+      },
+      {
+        "type": "Form.TextField",
+        "title": "Decimal",
+        "value": ""
+      },
+      {
+        "type": "Form.TextField",
+        "title": "Encoded URL",
+        "value": ""
+      },
+      {
+        "type": "Form.TextField",
+        "title": "HTML entity",
+        "value": ""
+      }
+    ],
+    "actions": [
+      {
+        "title": "Copy Native",
+        "content": ""
+      },
+      {
+        "title": "Copy Unicode",
+        "content": ""
+      },
+      {
+        "title": "Copy Base64",
+        "content": ""
+      },
+      {
+        "title": "Copy Utf-8",
+        "content": ""
+      },
+      {
+        "title": "Copy Ascii",
+        "content": ""
+      },
+      {
+        "title": "Copy Hex",
+        "content": ""
+      },
+      {
+        "title": "Copy Decimal",
+        "content": ""
+      },
+      {
+        "title": "Copy Encoded URL",
+        "content": ""
+      },
+      {
+        "title": "Copy Entity",
+        "content": ""
+      },
+      {
+        "title": "Clear All",
+        "content": null
+      },
+      {
+        "title": "Configure Command",
+        "content": null
+      },
+      {
+        "title": "Configure Extension",
+        "content": null
+      }
+    ]
+  },
+  {
+    "command": "code-converter",
+    "prefs": {
+      "advanceView": false,
+      "advanceViewLocation": "Bottom"
+    },
+    "fields": [
+      {
+        "type": "Form.TextField",
+        "title": "Native",
+        "value": ""
+      },
+      {
+        "type": "Form.TextField",
+        "title": "Unicode",
+        "value": ""
+      },
+      {
+        "type": "Form.TextField",
+        "title": "Base64",
+        "value": ""
+      },
+      {
+        "type": "Form.TextField",
+        "title": "UTF-8",
+        "value": ""
+      },
+      {
+        "type": "Form.TextField",
+        "title": "ASCII",
+        "value": ""
+      },
+      {
+        "type": "Form.TextField",
+        "title": "Hex",
+        "value": ""
+      },
+      {
+        "type": "Form.TextField",
+        "title": "Decimal",
+        "value": ""
+      },
+      {
+        "type": "Form.TextField",
+        "title": "Encoded URL",
+        "value": ""
+      },
+      {
+        "type": "Form.TextField",
+        "title": "HTML entity",
+        "value": ""
+      }
+    ],
+    "actions": [
+      {
+        "title": "Copy Native",
+        "content": ""
+      },
+      {
+        "title": "Copy Unicode",
+        "content": ""
+      },
+      {
+        "title": "Copy Base64",
+        "content": ""
+      },
+      {
+        "title": "Copy Utf-8",
+        "content": ""
+      },
+      {
+        "title": "Copy Ascii",
+        "content": ""
+      },
+      {
+        "title": "Copy Hex",
+        "content": ""
+      },
+      {
+        "title": "Copy Decimal",
+        "content": ""
+      },
+      {
+        "title": "Copy Encoded URL",
+        "content": ""
+      },
+      {
+        "title": "Copy Entity",
+        "content": ""
+      },
+      {
+        "title": "Clear All",
+        "content": null
+      },
+      {
+        "title": "Configure Command",
+        "content": null
+      },
+      {
+        "title": "Configure Extension",
+        "content": null
+      }
+    ]
+  },
+  {
+    "command": "byte-converter",
+    "prefs": {
+      "advanceView": true,
+      "advanceViewLocation": "Bottom"
+    },
+    "fields": [
+      {
+        "type": "Form.TextField",
+        "title": "bits",
+        "value": ""
+      },
+      {
+        "type": "Form.TextField",
+        "title": "Bytes",
+        "value": ""
+      },
+      {
+        "type": "Form.TextField",
+        "title": "KB",
+        "value": ""
+      },
+      {
+        "type": "Form.TextField",
+        "title": "MB",
+        "value": ""
+      },
+      {
+        "type": "Form.TextField",
+        "title": "GB",
+        "value": ""
+      },
+      {
+        "type": "Form.TextField",
+        "title": "TB",
+        "value": ""
+      },
+      {
+        "type": "Form.TextField",
+        "title": "PB",
+        "value": ""
+      },
+      {
+        "type": "Form.TextField",
+        "title": "EB",
+        "value": ""
+      }
+    ],
+    "actions": [
+      {
+        "title": "Copy  bits",
+        "content": " bits"
+      },
+      {
+        "title": "Copy  bits",
+        "content": " bits"
+      },
+      {
+        "title": "Copy  Bytes",
+        "content": " Bytes"
+      },
+      {
+        "title": "Copy  KB",
+        "content": " KB"
+      },
+      {
+        "title": "Copy  MB",
+        "content": " MB"
+      },
+      {
+        "title": "Copy  GB",
+        "content": " GB"
+      },
+      {
+        "title": "Copy  TB",
+        "content": " TB"
+      },
+      {
+        "title": "Copy  PB",
+        "content": " PB"
+      },
+      {
+        "title": "Copy  EB",
+        "content": " EB"
+      },
+      {
+        "title": "Configure Extension",
+        "content": null
+      }
+    ]
+  },
+  {
+    "command": "byte-converter",
+    "prefs": {
+      "advanceView": true,
+      "advanceViewLocation": "Top"
+    },
+    "fields": [
+      {
+        "type": "Form.TextField",
+        "title": "bits",
+        "value": ""
+      },
+      {
+        "type": "Form.TextField",
+        "title": "Bytes",
+        "value": ""
+      },
+      {
+        "type": "Form.TextField",
+        "title": "KB",
+        "value": ""
+      },
+      {
+        "type": "Form.TextField",
+        "title": "MB",
+        "value": ""
+      },
+      {
+        "type": "Form.TextField",
+        "title": "GB",
+        "value": ""
+      },
+      {
+        "type": "Form.TextField",
+        "title": "TB",
+        "value": ""
+      },
+      {
+        "type": "Form.TextField",
+        "title": "PB",
+        "value": ""
+      },
+      {
+        "type": "Form.TextField",
+        "title": "EB",
+        "value": ""
+      }
+    ],
+    "actions": [
+      {
+        "title": "Copy  bits",
+        "content": " bits"
+      },
+      {
+        "title": "Copy  bits",
+        "content": " bits"
+      },
+      {
+        "title": "Copy  Bytes",
+        "content": " Bytes"
+      },
+      {
+        "title": "Copy  KB",
+        "content": " KB"
+      },
+      {
+        "title": "Copy  MB",
+        "content": " MB"
+      },
+      {
+        "title": "Copy  GB",
+        "content": " GB"
+      },
+      {
+        "title": "Copy  TB",
+        "content": " TB"
+      },
+      {
+        "title": "Copy  PB",
+        "content": " PB"
+      },
+      {
+        "title": "Copy  EB",
+        "content": " EB"
+      },
+      {
+        "title": "Configure Extension",
+        "content": null
+      }
+    ]
+  },
+  {
+    "command": "byte-converter",
+    "prefs": {
+      "advanceView": false,
+      "advanceViewLocation": "Bottom"
+    },
+    "fields": [
+      {
+        "type": "Form.TextField",
+        "title": "bits",
+        "value": ""
+      },
+      {
+        "type": "Form.TextField",
+        "title": "Bytes",
+        "value": ""
+      },
+      {
+        "type": "Form.TextField",
+        "title": "KB",
+        "value": ""
+      },
+      {
+        "type": "Form.TextField",
+        "title": "MB",
+        "value": ""
+      },
+      {
+        "type": "Form.TextField",
+        "title": "GB",
+        "value": ""
+      },
+      {
+        "type": "Form.TextField",
+        "title": "TB",
+        "value": ""
+      },
+      {
+        "type": "Form.TextField",
+        "title": "PB",
+        "value": ""
+      },
+      {
+        "type": "Form.TextField",
+        "title": "EB",
+        "value": ""
+      }
+    ],
+    "actions": [
+      {
+        "title": "Copy  bits",
+        "content": " bits"
+      },
+      {
+        "title": "Copy  bits",
+        "content": " bits"
+      },
+      {
+        "title": "Copy  Bytes",
+        "content": " Bytes"
+      },
+      {
+        "title": "Copy  KB",
+        "content": " KB"
+      },
+      {
+        "title": "Copy  MB",
+        "content": " MB"
+      },
+      {
+        "title": "Copy  GB",
+        "content": " GB"
+      },
+      {
+        "title": "Copy  TB",
+        "content": " TB"
+      },
+      {
+        "title": "Copy  PB",
+        "content": " PB"
+      },
+      {
+        "title": "Copy  EB",
+        "content": " EB"
+      },
+      {
+        "title": "Configure Extension",
+        "content": null
+      }
+    ]
+  }
+]

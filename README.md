@@ -28,3 +28,5 @@ pnpm build
 ## Credits
 
 Adapted for Tezbar from Raycast's MIT-licensed `converter` extension at upstream commit `6734d85992290066fd31a7f5bee3cca3d3545a1a`. Original author `koinzhang` and contributors `Saafo`, `fmkra` remain credited in `package.json`.
+
+Standalone Rust V2 development port: [v2/README.md](v2/README.md).

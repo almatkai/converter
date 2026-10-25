@@ -1,0 +1,80 @@
+[
+  {
+    "path": "src-tauri/src/native_core/extensions/process_install.rs",
+    "function": "valid_capability",
+    "patched": false,
+    "sha256": "20831d5f9c77df1d69df9fae9b85ab7a4d5845a8e339dbcc2f1da49fdffea7b5"
+  },
+  {
+    "path": "src-tauri/src/native_core/extensions/process_install.rs",
+    "function": "component",
+    "patched": false,
+    "sha256": "a368f58b3523c8cfe7f40da307c8a4065302c18ca48988ddc96a963b99c5ffa3"
+  },
+  {
+    "path": "src-tauri/src/native_core/extensions/process_install.rs",
+    "function": "relative",
+    "patched": false,
+    "sha256": "8c5753913b9b9f060365fe47e1e2b9af35608805dbc914709d6ad39b26620903"
+  },
+  {
+    "path": "src-tauri/src/native_core/extensions/process_install.rs",
+    "function": "validate",
+    "patched": false,
+    "sha256": "780fdc65b5464b791db4078464aea8e768b0c433268683d99ca9c2c380e9f20c"
+  },
+  {
+    "path": "src-tauri/src/native_core/extensions/launcher.rs",
+    "function": "bounded_text",
+    "patched": false,
+    "sha256": "74162c10c757c8792204c4dee89b08f36118d23a30c9b02e4313c93941d0ea72"
+  },
+  {
+    "path": "src-tauri/src/native_core/extensions/launcher.rs",
+    "function": "validate",
+    "patched": false,
+    "sha256": "fb63f47eeeda1ea904e9a6fd5b8b3126900c7966f87142c3a26d51dd8bd95bfe"
+  },
+  {
+    "path": "src-tauri/src/native_core/extensions/registry.rs",
+    "function": "platform",
+    "patched": true,
+    "sha256": "2b4e443684d87c37ed19485fe1c3d35475e04c366e226683c0e507177d5d850a"
+  },
+  {
+    "path": "src-tauri/src/native_core/extensions/registry.rs",
+    "function": "compatible",
+    "patched": true,
+    "sha256": "9d02dc24aaf88ebdcbb1d6212e9d67f42215fbf4d76789bc81b9f3a08e3ef329"
+  },
+  {
+    "path": "src-tauri/src/native_core/extensions/registry.rs",
+    "function": "fallback",
+    "patched": true,
+    "sha256": "3188a6d9b3bea98596b9fa7ea54aed3df5a0510f8c2a45364aa67042a333523e"
+  },
+  {
+    "path": "src-tauri/src/native_core/extensions/registry.rs",
+    "function": "installed_command",
+    "patched": true,
+    "sha256": "291fdb67faaba08fd2ccf93a440f7dfd87a3244310660c8b235d7e611a052048"
+  },
+  {
+    "path": "src-tauri/src/native_core/extensions/registry.rs",
+    "function": "canonical_command_id",
+    "patched": true,
+    "sha256": "7987af35700a9cd2d2f3118138870f35a708ca17af737646c2779aad500dee96"
+  },
+  {
+    "path": "src-tauri/src/native_core/extensions/registry.rs",
+    "function": "icon_path",
+    "patched": true,
+    "sha256": "c7dc4ad435a8483a1e59e1ce595d0328002b9796321796f9fa9a2a34c7071807"
+  },
+  {
+    "path": "src-tauri/src/native_core/extensions/registry.rs",
+    "function": "command_icon_path",
+    "patched": true,
+    "sha256": "6618febc61f7558c2c21e6932b3a59fb42bf3ddbb2090e5b821e77b37682ce4e"
+  }
+]
