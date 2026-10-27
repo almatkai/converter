@@ -1,0 +1,25 @@
+[package]
+name = "tezbar-converter"
+version = "0.2.0-beta.1"
+edition = "2021"
+rust-version = "1.85"
+license = "MIT"
+
+[dependencies]
+tezbar-extension-sdk = { git = "https://github.com/almatkai/tezbar-extension-sdk-rust.git", rev = "e955911f0bf5b558f9d3eb5183df0adc95c22af2", version = "=0.1.1" }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+tokio = { version = "1", features = ["rt-multi-thread", "macros", "sync"] }
+num-bigint = "=0.4.6"
+num-traits = "=0.2.19"
+base64 = "=0.22.1"
+
+[lib]
+name = "converter"
+
+[[bin]]
+name = "converter"
+path = "src/main.rs"
+
+[dev-dependencies]
+semver = "=1.0.27"

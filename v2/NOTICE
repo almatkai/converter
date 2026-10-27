@@ -1,0 +1,28 @@
+Converter standalone Rust V2 — development beta, not an installed release.
+
+Port of almatkai/converter e20b6a750728dc54f6e6f16c87fa21361e8fe151,
+MIT, copyright (c) 2026 almatkai. The source LICENSE contains literal escaped
+newlines; LICENSE here changes their layout only. Raw evidence is retained in
+notices/converter-original-LICENSE.
+
+Original Raycast Converter by koinzhang; contributors Saafo and fmkra.
+Raycast extensions source/assets at 6734d85992290066fd31a7f5bee3cca3d3545a1a,
+MIT, copyright (c) 2021 Raycast. The original PNG is included unchanged.
+See notices/raycast-LICENSE.
+
+Uses tezbar-extension-sdk 0.1.1 at
+https://github.com/almatkai/tezbar-extension-sdk-rust.git
+revision e955911f0bf5b558f9d3eb5183df0adc95c22af2, Apache-2.0.
+Its authentic LICENSE and NOTICE are included in notices/.
+
+Pinned Tezbar host fixtures and patch excerpts are QA/integration material,
+Apache-2.0, host revision ea100cee3f69711de12485ba061950c5fc65258f.
+The host application is neither linked nor bundled into the executable.
+
+Cargo.lock identifies Rust dependencies. notices/cargo contains their authentic
+license/notice files. notices/npm covers QA tooling only; no JS, Node runtime,
+Raycast API runtime, or VM is in the product. qa/license-evidence.json records
+package declarations, copied-file hashes, and missing evidence explicitly.
+A package license declaration is not presented as a recovered license grant.
+Node's Buffer is a QA builtin from the recorded Node runtime; Node itself is not
+redistributed. No random producer is used by the source converter.
